@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #111;
+  color: #fff;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.video-section {
+  flex: 1;
+  padding: 20px;
+}
+
+.transcript-section {
+  width: 30%;
+  background: #f2f2f2;
+  color: #000;
+  padding: 20px;
+  max-height: calc(100vh - 140px);
+  border-radius: 8px;
+  margin-top: 20px;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.transcript-scroll-container {
+  overflow-y: auto;
+  max-height: 100%;
+  padding-right: 1rem;
+  margin-bottom: 0;
+  flex: 1; /* fills remaining space under heading */
+}
+
+.transcript-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.caption-line {
+  padding: 10px;
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.caption-time {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.caption-line:hover {
+  background-color: #ddd;
+}
+
+.caption-line.active {
+  background-color: #cbd6ff;
+  font-weight: bold;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+video {
+  width: 100%;
+  max-height: 80vh;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Caption overlay on the video (if used) */
+.caption-overlay {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px 20px;
+  color: white;
+  font-size: 1rem;
+  border-radius: 6px;
+  max-width: 80%;
+  text-align: center;
+  white-space: pre-line;
+}
+
+.clip-selector {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.clip-selector label {
+  margin-right: 10px;
+}
+
+.clip-selector select {
+  padding: 6px 10px;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+.status-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  color: #ccc;
+}
+
+.status-message h1 {
+  font-size: 2rem;
+}
+
